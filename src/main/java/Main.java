@@ -9,12 +9,12 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         try {
-            Map<String, Match> matches = readMatchData("src/main/resources/match_data.txt");
-            Map<String, Player> players = readPlayerData("src/main/resources/player_data.txt", matches);
+            Map<String, Match> matches = readMatchData("resources/match_data.txt");
+            Map<String, Player> players = readPlayerData("resources/player_data.txt", matches);
 
             processPlayerActions(players, matches);
 
-            writeResults("src/main/resources/result.txt", players);
+            writeResults("resources/result.txt", players);
 
         } catch (IOException e) {
             e.printStackTrace();
