@@ -14,7 +14,7 @@ public class Main {
 
             processPlayerActions(players, matches);
 
-            writeResults("resources/result.txt", players);
+            writeResults("java/result.txt", players);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -89,7 +89,7 @@ public class Main {
                     if (match != null) {
                         if ("A".equals(match.getResult()) || "B".equals(match.getResult())) {
 
-                            long betResult = player.calculateBetResults(matchId);
+                            int betResult = player.calculateBetResults(matchId);
                             player.deposit(betResult);
                         } else if ("Draw".equals(match.getResult())) {
                             player.deposit(betAmount);

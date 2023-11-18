@@ -47,11 +47,11 @@ public class Player {
         return illegalOperationDetails;
     }
 
-    public void deposit(long amount) {
+    public void deposit(int amount) {
         balance += amount;
     }
 
-    public void withdraw(long amount) {
+    public void withdraw(int amount) {
         if (amount <= balance) {
             balance -= amount;
         } else {
@@ -85,8 +85,8 @@ public class Player {
         }
     }
 
-    public long calculateBetResults(String matchId) {
-        long netResult = 0;
+    public int calculateBetResults(String matchId) {
+        int netResult = 0;
 
         int betAmount = bets.get(matchId);
         Match match = matches.get(matchId);
